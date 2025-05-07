@@ -1,11 +1,9 @@
 <template>
-  <header class="text-center py-6">
-    <img
-      src="https://img.freepik.com/vecteurs-libre/lettre-coloree-creation-logo-degrade_474888-2309.jpg"
-      alt="Logo du restaurant"
-      class="mx-auto w-32 h-32 object-contain rounded-full shadow-md border-4 border-white"
-    />
-    <h1 class="text-3xl mt-4 font-bold text-pink-700">MON RESTAURANT</h1>
-    <p class="text-sm text-gray-500">L'art du sushi à la japonaise, revisité avec élégance</p>
+  <header class="text-center py-6 border-b border-gray-300 bg-[#fdfaf4]">
+    <h1 class="text-4xl title-font text-gray-900">Ristorante Eleganza</h1>
+    <p class="text-sm text-gray-600 italic">Paris XVI - Cuisine Italienne Authentique</p>
+    <div class="mt-2">
+      <NuxtLink to="/he" class="text-sm underline text-blue-600 hover:text-blue-800">🇮🇱 עברית</NuxtLink>
+    </div>
   </header>
 </template>

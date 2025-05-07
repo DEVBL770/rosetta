@@ -1,18 +1,17 @@
 <template>
-  <section class="my-8">
-    <h2 class="text-2xl font-bold text-center text-orange-400 mb-6">{{ title }}</h2>
-    <div class="space-y-4">
-      <MenuItem
-        v-for="(item, i) in items"
-        :key="i"
-        :item="item"
-        :reverse="i % 2 !== 0"
-      />
+  <section class="my-8 px-6">
+    <h2 class="text-2xl title-font border-b-2 border-gray-400 inline-block mb-4 text-gray-900">{{ title }}</h2>
+    <div>
+      <MenuItem v-for="(item, index) in items" :key="index" :name="item.name" :description="item.description" :price="item.price" />
     </div>
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import MenuItem from './MenuItem.vue'
-defineProps({ title: String, items: Array })
+
+defineProps({
+  title: String,
+  items: Array
+})
 </script>
