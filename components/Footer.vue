@@ -1,5 +1,6 @@
 <template>
-  <footer class="text-center py-4 text-gray-500 text-sm bg-[#fdfaf4] border-t border-gray-300">
-    <p>&copy; 2025 Ristorante Eleganza - Tous droits réservés</p>
+  <footer class="bg-white border-t border-gray-200 py-6 text-center text-sm text-gray-500">
+    <p>© 2025 Jacob Meatpacker. Tous droits réservés.</p>
+    <p>5 rue Médéric, 75017 Paris — 01 56 33 70 00</p>
   </footer>
 </template>

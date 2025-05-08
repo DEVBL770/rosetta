@@ -1,17 +1,17 @@
 <template>
-  <div class="flex justify-between border-b border-dashed border-gray-300 py-2">
+  <div class="flex justify-between items-start">
     <div>
-      <h3 class="text-lg title-font text-gray-800">{{ name }}</h3>
-      <p class="text-sm text-gray-500 italic">{{ description }}</p>
+      <h3 class="text-lg font-semibold">{{ name }}</h3>
+      <p class="text-sm text-white-700">{{ description }}</p>
     </div>
-    <span class="price-font text-gray-700">€{{ price }}</span>
+    <span class="text-md font-bold text-white-800">{{ price }} €</span>
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 defineProps({
   name: String,
   description: String,
-  price: Number
-})
+  price: String
+});
 </script>
