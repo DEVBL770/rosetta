@@ -23,7 +23,8 @@
                 <p class="font-bold text-white">{{ item.name }}</p>
                 <p class="text-sm text-gray-400">{{ item.description }}</p>
               </div>
-              <p class="text-white font-semibold">{{ item.price.toFixed(2) }} €</p>
+              <p class="text-white font-semibold whitespace-nowrap">{{ item.price.toFixed(2) }}&nbsp;€</p>
+
             </li>
           </ul>
         </div>
