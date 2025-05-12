@@ -1,6 +1,7 @@
 <template> 
   <div class="bg-[#121212] font-black-paris text-white">
     <Header />
+    <MenuAccordion />
     <main class="max-w-4xl mx-auto px-4 py-8 space-y-16">
       <MenuSection id="burgers" title="Meat Burgers" :items="burgers" />
       <MenuSection id="chicken" title="Chicken" :items="chicken" />
@@ -15,6 +16,7 @@
 </template>
 
 <script setup>
+import MenuAccordion from '~/components/MenuAccordion.vue'
 import Header from '~/components/Header.vue'
 import Footer from '~/components/Footer.vue'
 import MenuSection from '~/components/MenuSection.vue'
