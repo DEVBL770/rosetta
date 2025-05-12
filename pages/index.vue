@@ -1,13 +1,11 @@
-<template>
- <div class="bg-[#121212] font-black-paris text-white">
+<template> 
+  <div class="bg-[#121212] font-black-paris text-white">
     <Header />
     <main class="max-w-4xl mx-auto px-4 py-8 space-y-16">
-      <MenuSection id="burgers" title="Burgers" :items="burgers" />
+      <MenuSection id="burgers" title="Meat Burgers" :items="burgers" />
       <MenuSection id="chicken" title="Chicken" :items="chicken" />
       <MenuSection id="fish" title="Fish" :items="fish" />
       <MenuSection id="signatures" title="Signatures" :items="signatures" />
-      <MenuSection id="bagels" title="Bagels" :items="bagels" />
-      <MenuSection id="sandwichs" title="Sandwichs" :items="sandwichs" />
       <MenuSection id="sides" title="Accompagnements" :items="sides" />
       <MenuSection id="desserts" title="Desserts" :items="desserts" />
       <MenuSection id="boissons" title="Boissons" :items="boissons" />
@@ -21,162 +19,82 @@ import Header from '~/components/Header.vue'
 import Footer from '~/components/Footer.vue'
 import MenuSection from '~/components/MenuSection.vue'
 
-// Menu complet Jacob Meatpacker
+// BURGERS
 const burgers = [
-  {
-    name: 'Jacob',
-    description: 'Double 100% Bœuf, fromage, oignons caramélisés, champignons, charcuterie fumée, tomate, cornichons, iceberg',
-    price: 27.00,
-  },
-  {
-    name: 'Pepper Cheese',
-    description: 'Sauce au poivre vert maison, 100% Bœuf, fromage, oignons caramélisés, tomate, cornichons, iceberg',
-    price: 18.40,
-  },
-  {
-    name: 'Cheese Burger',
-    description: '100% Bœuf, fromage, oignons caramélisés, tomate, cornichons, iceberg',
-    price: 17.00,
-  },
-  {
-    name: 'Hamburger',
-    description: '100% Bœuf, oignons caramélisés, tomate, cornichons, iceberg',
-    price: 15.00,
-  },
+  { name: 'Classic', description: 'Mayonnaise maison, 100 % Bœuf, oignons caramélisés maison, tomate, cornichons aigre doux, iceberg', price: 15.50 },
+  { name: 'Cheese', description: 'Mayonnaise maison, 100 % Bœuf, fromage (parve), oignons caramélisés maison, tomate, cornichons aigre doux, iceberg', price: 16.50 },
+  { name: 'Pepper', description: 'Sauce au Poivre Vert maison, 100 % Bœuf, oignons caramélisés maison, tomate, cornichons aigre doux, iceberg', price: 16.50 },
+  { name: 'Deli', description: 'Mayonnaise maison, 100 % Bœuf, oignons caramélisés, «Deli» charcuterie fumée et snackée, tomate, cornichons aigre doux, iceberg', price: 17.50 },
+  { name: 'Mushroom', description: 'Mayonnaise maison, 100 % Bœuf, champignons poêlés au vin blanc, cornichons aigre doux, iceberg', price: 16.50 },
+  { name: 'Peno', description: 'Mayonnaise maison, 100% Boeuf, oignons caramélisés, piments snackés au miel, tomate, cornichons aigre doux, iceberg', price: 16.50 },
+  { name: 'Deli Cheese', description: 'Mayonnaise maison, 100% Boeuf, fromage (parve), oignons caramélisés maison, "Deli" charcuterie fumée et snackée, tomate, cornichons aigre doux, iceberg', price: 18.40 },
+  { name: 'Pepper Cheese', description: 'Sauce au Poivre Vert maison, 100% Boeuf, fromage (parve), oignons caramélisés maison, tomate, cornichons aigre doux, iceberg', price: 18.40 },
+  { name: 'Mushroom Cheese', description: 'Mayonnaise maison, 100% Boeuf, fromage (parve), champignons poêlés au vin blanc, tomate, cornichons aigre doux, iceberg', price: 17.90 },
+  { name: 'Delipeno', description: 'Mayonnaise maison, 100% Boeuf, oignons caramélisés, "Deli" charcuterie fumée et snackée, piments snackés au miel, tomate, cornichons aigre doux, iceberg', price: 18.40 },
+  { name: 'Pepper Deli', description: 'Sauce au Poivre Vert maison, 100% Boeuf, oignons caramélisés maison, "Deli" charcuterie fumée et snackée, tomate, cornichons aigre doux, iceberg', price: 18.40 },
+  { name: 'Jacob', description: 'Sauce au Poivre Vert maison, DOUBLE 100% Boeuf, fromage (parve), oignons caramélisés maison, champignons poêlés au vin blanc, "Deli" charcuterie fumée et snackée, tomate, cornichons aigre doux, iceberg', price: 27.00 }
 ]
 
+// CHICKEN
 const chicken = [
-  {
-    name: 'Crunchy',
-    description: 'Poulet croustillant, fromage, oignons caramélisés, tomate, cornichons, iceberg, sauce blanche maison',
-    price: 17.00,
-  },
-  {
-    name: 'Chicken Classic',
-    description: 'Blanc de poulet grillé, fromage, oignons caramélisés, tomate, cornichons, iceberg, sauce blanche maison',
-    price: 17.00,
-  },
+  { name: 'Fried Chicken', description: 'Moutarde au miel, poitrine de poulet « Panée maison », oignons frits, tomate, iceberg', price: 16.90 },
+  { name: 'P.C.C.', description: 'Sauce au Poivre Vert maison, poitrine de poulet "Panée maison", fromage (parve), oignons caramélisés maison, iceberg', price: 17.50 },
+  { name: 'Caesar', description: 'Sauce Caesar maison, poitrine de poulet "Panée maison", fromage (parve), tomate, iceberg', price: 16.90 },
+  { name: 'Crunch Burger', description: '4 sauces (pepper, caesar, sweet chili, moutarde miel), avocat, Chicken crunch maison, roquette, citron', price: 17.90 },
+  { name: 'Grilled Chicken', description: 'Sweet and Sour sauce, poitrine de poulet grillée, tomate, iceberg', price: 16.90 }
 ]
 
+// FISH
 const fish = [
-  {
-    name: 'Fish Burger',
-    description: 'Filet de poisson pané, sauce tartare, iceberg, tomate, oignon rouge',
-    price: 15.00,
-  },
+  { name: 'Cabillaud', description: 'Sauce Tartare maison, Cabillaud Pané maison, fromage (parve)', price: 22.00 }
 ]
 
+// SIGNATURES
 const signatures = [
-  {
-    name: 'Giant Pastrami',
-    description: 'Pastrami maison, sauce moutarde douce, pickles, tomate, iceberg',
-    price: 17.50,
-  },
-  {
-    name: 'Smoked Turkey',
-    description: 'Dinde fumée, sauce moutarde douce, pickles, tomate, iceberg',
-    price: 17.00,
-  },
-  {
-    name: 'Chicken Pastrami',
-    description: 'Poulet grillé, pastrami, sauce moutarde douce, pickles, tomate, iceberg',
-    price: 17.50,
-  },
+  { name: 'Pulled Beef', description: 'Mayonnaise à l\'ail, boeuf effiloché et caramélisé, chou rouge, estragon & noisettes torrefiées', price: 22.00 },
+  { name: 'Motz', description: 'Mayonnaise maison, double viande fine "smashée", double cheese (parve), oignons, cornichons', price: 18.40 }
 ]
 
-const bagels = [
-  {
-    name: 'Bagel Dinde',
-    description: 'Dinde fumée, sauce mayonnaise maison, pickles, tomate, iceberg',
-    price: 8.90,
-  },
-  {
-    name: 'Bagel Pastrami',
-    description: 'Pastrami, sauce mayonnaise maison, pickles, tomate, iceberg',
-    price: 9.40,
-  },
-]
-
-const sandwichs = [
-  {
-    name: 'Pastrami',
-    description: 'Pastrami maison, moutarde douce, pickles, pain baguette',
-    price: 13.50,
-  },
-  {
-    name: 'Dinde',
-    description: 'Dinde fumée, moutarde douce, pickles, pain baguette',
-    price: 13.00,
-  },
-]
-
+// SIDES
 const sides = [
-  {
-    name: 'Frites maison',
-    description: 'Frites fraîches préparées sur place',
-    price: 6.00,
-  },
-  {
-    name: 'Chicken Crunch',
-    description: 'Poulet croustillant maison',
-    price: 9.90,
-  },
-  {
-    name: 'Onion Rings',
-    description: 'Rondelles d’oignon panées croustillantes',
-    price: 7.00,
-  },
-  {
-    name: 'Coleslaw',
-    description: 'Salade de chou maison',
-    price: 5.00,
-  },
+  { name: 'Frites Maison', description: '', price: 5.50 },
+  { name: 'Chicken Crunch X6', description: '', price: 9.90 },
+  { name: 'Chicken Crunch X9', description: '', price: 14.50 },
+  { name: 'Chicken Crunch X12', description: '', price: 18.50 },
+  { name: 'Onion Rings Maison X6', description: '', price: 8.00 },
+  { name: 'Onion Rings Maison X9', description: '', price: 11.00 },
+  { name: 'Onion Rings Maison X12', description: '', price: 13.50 },
+  { name: 'Fish Sticks X6', description: '', price: 12.00 },
+  { name: 'Fish Sticks X9', description: '', price: 18.00 },
+  { name: 'Fish Sticks X12', description: '', price: 24.00 }
 ]
 
+// DESSERTS
 const desserts = [
-  {
-    name: 'Tarte aux pommes maison',
-    description: 'Tarte faite maison',
-    price: 6.00,
-  },
-  {
-    name: 'Mousse au chocolat maison',
-    description: 'Mousse faite maison',
-    price: 6.00,
-  },
-  {
-    name: 'Crème dessert vanille',
-    description: 'Crème onctueuse à la vanille',
-    price: 4.50,
-  },
+  { name: 'Salade de fruits frais', description: '', price: 5.50 },
+  { name: 'Mousse au chocolat Maison', description: '', price: 5.50 }
 ]
 
+// BOISSONS
 const boissons = [
-  {
-    name: 'Coca-Cola',
-    description: '33 cl',
-    price: 3.50,
-  },
-  {
-    name: 'Coca-Cola Zero',
-    description: '33 cl',
-    price: 3.50,
-  },
-  {
-    name: 'Fanta',
-    description: '33 cl',
-    price: 3.50,
-  },
-  {
-    name: 'Sprite',
-    description: '33 cl',
-    price: 3.50,
-  },
-  {
-    name: 'Eau Evian',
-    description: '50 cl',
-    price: 3.50,
-  },
+  { name: 'Coca-Cola', description: '330ml', price: 3.00 },
+  { name: 'Coca-Cola Light', description: '330ml', price: 3.00 },
+  { name: 'Coca-Cola Zero', description: '330ml', price: 3.00 },
+  { name: 'Sprite', description: '330ml', price: 3.00 },
+  { name: 'Ice Tea Pêche', description: '330ml', price: 3.00 },
+  { name: 'Ice Tea Citron Vert', description: '330ml', price: 3.00 },
+  { name: 'Evian', description: '500ml', price: 3.00 },
+  { name: 'Badoit', description: '330ml', price: 3.00 },
+  { name: 'Orangina', description: '330ml', price: 3.00 },
+  { name: 'Dr Pepper', description: '330ml', price: 3.50 },
+  { name: 'San Pellegrino Orange', description: '330ml', price: 3.50 },
+  { name: 'San Pellegrino Pamplemousse', description: '330ml', price: 3.50 },
+  { name: 'Boylan Cane Cola', description: '355ml', price: 4.90 },
+  { name: 'Heineken', description: '330ml', price: 4.50 },
+  { name: 'Carlsberg', description: '330ml', price: 6.00 },
+  { name: 'Brooklyn Beer Brown', description: '355ml', price: 8.00 },
+  { name: 'Brooklyn Beer Summer', description: '355ml', price: 8.00 },
+  { name: 'Brooklyn Beer 1/2 Ale', description: '355ml', price: 8.00 }
 ]
 </script>
 
