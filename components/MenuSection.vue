@@ -19,3 +19,11 @@ defineProps({
   items: Array
 });
 </script>
+
+<style scoped>
+@media (max-width: 767px) {
+  .menu-item p {
+    white-space: normal; /* Permet à la description de se casser sur plusieurs lignes */
+  }
+}
+</style>
