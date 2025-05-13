@@ -1,6 +1,6 @@
 <template>
   <section :id="sectionId" class="py-12 px-4">
-    <h2 class="text-3xl font-bold text-center mb-8">{{ title }}</h2>
+    <h2 class="text-3xl font-bold text-center mb-8">{{ title }}{{ description }}</h2>
     <div class="space-y-6">
       <div v-for="(item, index) in items" :key="index" class="flex justify-between items-center p-4 border-b border-gray-200">
         <div class="flex-1">
@@ -8,7 +8,7 @@
           <p class="text-gray-600">{{ item.description }}</p>
         </div>
         <div class="w-24 text-right">
-          <span class="text-lg font-bold">{{ item.price }}</span>
+          <span class="text-lg font-bold">{{ item.price }} €</span>
         </div>
       </div>
     </div>
