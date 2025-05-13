@@ -1,6 +1,7 @@
 <template>
   <header class="bg-gray-900 text-white">
     <div class="max-w-screen-xl mx-auto flex justify-between items-center p-4">
+      <!-- Logo -->
       <img src="https://static.wixstatic.com/media/a99bfb_51d08cb347e14efa80d703d7c8667eed~mv2.png/v1/fill/w_129,h_67,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo%20Jacob%20nouveau%20Blanc.png" alt="Logo Jacob Meat Peaker" class="h-16" />
 
       <!-- Hamburger Icon -->
@@ -11,13 +12,13 @@
       </button>
 
       <!-- Menu Mobile -->
-      <nav v-if="isMenuOpen" class="absolute top-16 right-4 bg-gray-800 text-white p-4 rounded-lg lg:hidden">
-        <ul>
-          <li><a href="#burgers" class="block py-2 px-4 hover:bg-gray-700" @click="closeMenu">Burgers</a></li>
-          <li><a href="#chicken" class="block py-2 px-4 hover:bg-gray-700" @click="closeMenu">Poulet</a></li>
-          <li><a href="#fish" class="block py-2 px-4 hover:bg-gray-700" @click="closeMenu">Poisson</a></li>
-        </ul>
-      </nav>
+      <transition name="fade">
+        <nav v-if="isMenuOpen" class="absolute top-0 left-0 w-full h-screen bg-[#121212] z-40 flex flex-col items-center justify-center space-y-6 text-xl">
+          <a v-for="item in menuItems" :key="item.id" :href="`#${item.id}`" class="hover:underline text-white" @click="closeMenu">
+            {{ item.label }}
+          </a>
+        </nav>
+      </transition>
 
       <!-- Desktop Menu -->
       <nav class="hidden lg:flex space-x-6">
@@ -41,4 +42,20 @@ const toggleMenu = () => {
 const closeMenu = () => {
   isMenuOpen.value = false
 }
+
+const menuItems = [
+  { id: 'burgers', label: 'Burgers' },
+  { id: 'chicken', label: 'Poulet' },
+  { id: 'fish', label: 'Poisson' }
+]
 </script>
+
+<style scoped>
+/* Animation pour le menu mobile */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+</style>
