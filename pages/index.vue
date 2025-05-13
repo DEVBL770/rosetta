@@ -21,22 +21,22 @@
     />
     <MenuSection
       section-id="chicken"
-      title="Chicken"
+      title="Chicken Burgers"
       :items="chicken"
     />
     <MenuSection
       section-id="fish"
-      title="Fish"
+      title="Fish Burgers"
       :items="fish"
     />
     <MenuSection
       section-id="signatures"
-      title="Signatures"
+      title="Burgers Signature"
       :items="signatures"
     />
     <MenuSection
       section-id="sides"
-      title="Sides"
+      title="Appetizers Sides"
       :items="sides"
     />
     <MenuSection
@@ -46,7 +46,7 @@
     />
     <MenuSection
       section-id="boissons"
-      title="Drinks"
+      title="Boissons"
       :items="boissons"
     />
 
