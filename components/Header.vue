@@ -13,7 +13,7 @@
 
       <!-- Menu Mobile -->
       <transition name="fade">
-        <nav v-if="isMenuOpen" class="absolute top-0 left-0 w-full h-screen bg-[#4e5d82] z-40 flex flex-col items-center justify-center space-y-6 text-xl">
+        <nav v-if="isMenuOpen" class="absolute top-0 left-0 w-full h-screen bg-gray-700 z-40 flex flex-col items-center justify-center space-y-6 text-xl">
           <a v-for="item in menuItems" :key="item.id" :href="`#${item.id}`" class="hover:underline text-white font-serif" @click="closeMenu">
             {{ item.label }}
           </a>
