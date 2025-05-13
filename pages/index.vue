@@ -21,12 +21,12 @@
     />
     <MenuSection
       section-id="chicken"
-      title="Poulet"
+      title="Chicken"
       :items="chicken"
     />
     <MenuSection
       section-id="fish"
-      title="Poisson"
+      title="Fish"
       :items="fish"
     />
     <MenuSection
@@ -36,7 +36,7 @@
     />
     <MenuSection
       section-id="sides"
-      title="Accompagnements"
+      title="Sides"
       :items="sides"
     />
     <MenuSection
@@ -46,7 +46,7 @@
     />
     <MenuSection
       section-id="boissons"
-      title="Boissons"
+      title="Drinks"
       :items="boissons"
     />
 
