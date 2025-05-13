@@ -1,7 +1,7 @@
 <template>
-  <section class="my-8">
-    <h2 class="text-3xl font-extrabold font-serif border-b-2 border-gray-300 pb-2 mb-4">{{ title }}</h2>
-    <div class="grid gap-6">
+  <section :id="sectionId" class="pt-24 scroll-mt-24 px-4 sm:px-8 lg:px-16">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">{{ title }}</h2>
+    <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
       <MenuItem
         v-for="(item, index) in items"
         :key="index"
@@ -16,14 +16,7 @@
 <script setup>
 defineProps({
   title: String,
-  items: Array
+  items: Array,
+  sectionId: String
 });
 </script>
-
-<style scoped>
-@media (max-width: 767px) {
-  .menu-item p {
-    white-space: normal; /* Permet à la description de se casser sur plusieurs lignes */
-  }
-}
-</style>

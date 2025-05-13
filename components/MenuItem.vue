@@ -1,12 +1,8 @@
 <template>
-  <div class="flex justify-between items-start py-4 border-b border-gray-600">
-    <div class="w-3/4 pr-4">
-      <h3 class="text-lg font-semibold">{{ name }}</h3>
-      <p class="text-sm text-white-700 break-words">{{ description }}</p>
-    </div>
-    <div class="w-1/4 text-right">
-      <span class="text-md font-bold text-white-800">{{ price }} €</span>
-    </div>
+  <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition">
+    <h3 class="text-xl font-semibold mb-2">{{ name }}</h3>
+    <p class="text-gray-600 mb-2">{{ description }}</p>
+    <p class="text-primary font-bold text-lg">{{ price }} €</p>
   </div>
 </template>
 
@@ -14,6 +10,6 @@
 defineProps({
   name: String,
   description: String,
-  price: [String, Number]
-});
+  price: Number
+})
 </script>
