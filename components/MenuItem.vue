@@ -1,15 +1,15 @@
 <template>
-  <div class="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition">
-    <h3 class="text-xl font-semibold mb-2">{{ name }}</h3>
-    <p class="text-gray-600 mb-2">{{ description }}</p>
-    <p class="text-primary font-bold text-lg">{{ price }} €</p>
+  <div class="border-b border-[#e7e2dd] pb-4">
+    <div class="flex justify-between items-start">
+      <div>
+        <h3 class="text-lg font-medium text-[#1b3b34]">{{ name }}</h3>
+        <p class="text-sm text-[#555] italic">{{ description }}</p>
+      </div>
+      <span class="text-[#a16c4f] font-semibold whitespace-nowrap">{{ price }}</span>
+    </div>
   </div>
 </template>
 
 <script setup>
-defineProps({
-  name: String,
-  description: String,
-  price: Number
-})
+defineProps(['name', 'price', 'description'])
 </script>
